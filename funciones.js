@@ -8,3 +8,6 @@ function calcularDisponible(ingresos,egresos){
     return valorDisponible;
 }
 
+function calcularCapacidadPago(montoDisponible){
+    return montoDisponible*0.5;
+}
