@@ -22,3 +22,5 @@ ajusta los recuadros plazo (Años) y tasa (%) al nivel del recuadro monto del pr
 
 Prompts 8:
 ponle el estilo del botón calcular crédito igual al botón reiniciar.
+
+
