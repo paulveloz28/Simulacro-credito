@@ -150,3 +150,45 @@ button {
     text-align: center;
     margin-bottom: 15px;
 }
+
+.topbar {
+    background: #FFDD00; /* amarillo banco */
+    color: #003A8F; /* azul banco */
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.brand {
+    font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Barra superior */
+.topbar {
+  background: #0b2e59; /* azul bancario */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #ffd100; /* amarillo tipo Pichincha */
+}
+
+/* Título principal */
+.titulo {
+  margin: 0;
+  font-size: 34px; /* aumentado */
+  font-weight: 800;
+  color: #ffd100; /* amarillo principal */
+  letter-spacing: 1px;
+}
+
+/* Subtítulo */
+.subtitulo {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  opacity: 0.9;
+}
