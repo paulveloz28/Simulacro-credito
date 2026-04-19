@@ -39,4 +39,7 @@ function calcular(){
     let cmpInteres=document.getElementById("spnInteresPagar");
     cmpInteres.innerText=interes;
 
+    let totalPagar=calcularTotalPagar(monto,interes);
+    let cmpTotal=document.getElementById("spnTotalPrestamo");
+    cmpTotal.innerText=totalPagar;
 }
