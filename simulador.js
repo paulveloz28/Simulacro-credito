@@ -3,6 +3,8 @@ function calcular(){
     const camposId = ["txtIngresos", "txtEgresos", "txtMonto", "txtPlazo", "txtTasaInteres"];
     let formularioValido = true;
 
+    const soloNumerosRegex = /^[0-9]*\.?[0-9]+$/;//aumento
+
     // Limpiar errores y estilos previos antes de volver a validar
     camposId.forEach(id => {
         const input = document.getElementById(id);
@@ -19,6 +21,11 @@ function calcular(){
 
         if (input.value.trim() === "") {
             if (errorSpan) errorSpan.innerText = "Este campo es obligatorio";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
+        else if (!soloNumerosRegex.test(valor)) {
+            if (errorSpan) errorSpan.innerText = "No se permite letras ni signos";
             input.classList.add("input-error");
             formularioValido = false;
         }
