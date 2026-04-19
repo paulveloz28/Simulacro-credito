@@ -1,70 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
 .container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
+/* TITULOS */
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #1e3c72;
 }
 
 h2 {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* TARJETAS */
+.card {
+    background: #f9fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* INPUTS */
+.form-group {
+    margin-bottom: 12px;
 }
 
 label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 13px;
+    color: #666;
 }
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    transition: 0.3s;
 }
 
-p {
+input:focus {
+    border-color: #2a5298;
+    outline: none;
+    box-shadow: 0 0 5px rgba(42,82,152,0.3);
+}
+
+/* RESULTADOS */
+.result-box {
     margin-top: 10px;
+    background: #eef3ff;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-span {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.buttons {
-    margin-top: 20px;
+.result-box p {
+    font-size: 13px;
+    margin: 5px 0;
     display: flex;
     justify-content: space-between;
 }
 
+span {
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+/* ESTADO */
+.estado span {
+    color: #e67e22;
+}
+
+/* BOTONES */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
+    border-radius: 8px;
+    background: #2a5298;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background: #1e3c72;
+    transform: translateY(-2px);
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary {
+    background: #bdc3c7;
+}
+
+.btn-secondary:hover {
+    background: #95a5a6;
 }
