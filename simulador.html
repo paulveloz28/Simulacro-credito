@@ -17,7 +17,6 @@
         <header class="topbar">
             <div class="topbar-content">
                 <img src="isoBancoP.jpg" alt="Banco Pichincha" class="logo-img">
-                
                 <div class="textos">
                     <h2 class="brand-name">BANCO PICHINCHA</h2>
                     <h1 class="titulo-top">Simulador de Crédito</h1>
@@ -52,11 +51,11 @@
                 <div class="result-box summary">
                     <div class="result-row">
                         <span>Disponible:</span>
-                        <span id="spnDisponible" class="val">$0.00</span>
+                        <span id="spnDisponible">$0.00</span>
                     </div>
                     <div class="result-row">
                         <span>Capacidad de pago:</span>
-                        <span id="spnCapacidadPago" class="val">$0.00</span>
+                        <span id="spnCapacidadPago">$0.00</span>
                     </div>
                 </div>
             </section>
@@ -67,22 +66,23 @@
                     <h2>Detalles del Crédito</h2>
                 </div>
 
-                <div class="input-group">
-                    <label for="txtMonto">Monto del Préstamo</label>
-                    <div class="input-wrapper">
-                        <span class="prefix">$</span>
-                        <input type="text" id="txtMonto" placeholder="0.00">
+                <div class="row-triple">
+                    <div class="input-group">
+                        <label for="txtMonto">Monto</label>
+                        <div class="input-wrapper">
+                            <span class="prefix">$</span>
+                            <input type="text" id="txtMonto" placeholder="0.00">
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
                     <div class="input-group">
                         <label for="txtPlazo">Plazo (Años)</label>
-                        <input type="text" id="txtPlazo" placeholder="Ej: 5">
+                        <input type="text" id="txtPlazo" placeholder="0">
                     </div>
+
                     <div class="input-group">
                         <label for="txtTasaInteres">Tasa (%)</label>
-                        <input type="text" id="txtTasaInteres" placeholder="12">
+                        <input type="text" id="txtTasaInteres" placeholder="0">
                     </div>
                 </div>
 

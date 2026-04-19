@@ -16,3 +16,6 @@ agrega el siguiente texto BANCO PICHINCHA en la parte superior encima de simulad
 
 Prompts 6:
 ajústale la barra azul donde está el logo, los textos, BANCO PICHINCHA, simulador de crédito y somos un banco que da vida a las cajas donde se van a colocar los datos.
+
+Prompts 7:
+ajusta los recuadros plazo (Años) y tasa (%) al nivel del recuadro monto del préstamo ya que se están saliendo del recuadro.
