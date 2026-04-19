@@ -4,8 +4,12 @@ ayúdame a validar los campos obligatorios enviándome un mensaje que diga este 
 prompt 2
 ayúdame a validar los tipos de datos como, enviándome un mensaje que diga no se permite números negativos debajo de los cuadros donde se ponen los datos, el texto debe de ser de color rojo.
 
-prompt 2
+prompt 3
 ayúdame a validar los tipos de datos como, enviándome un mensaje que diga no se permite letras ni signos debajo de los cuadros donde se ponen los datos, el texto debe de ser de color rojo.
 
+prompt 4
+ayúdame a validar los montos máximos, enviándome un mensaje que diga máximo 5 dígitos debajo de los cuadros donde se ponen los datos, el texto debe de ser de color rojo.
 
+prompt 5
+ayúdame a validar el plazo (años) enviándome un mensaje que diga plazo máximo 10 años debajo del cuadro donde se ponen los datos de plazo (años), el texto debe de ser de color rojo.
 

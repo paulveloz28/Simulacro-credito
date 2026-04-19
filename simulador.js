@@ -18,6 +18,7 @@ function calcular(){
         const input = document.getElementById(id);
         const errorSpan = document.getElementById("error-" + id);
         const valor = input.value.trim();
+        const valorNumerico = parseFloat(valor);
 
         if (input.value.trim() === "") {
             if (errorSpan) errorSpan.innerText = "Este campo es obligatorio";
@@ -31,6 +32,16 @@ function calcular(){
         }
         else if (parseFloat(valor) < 0) {
             if (errorSpan) errorSpan.innerText = "No se permite números negativos";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
+        else if (valor.replace(".", "").length > 5) {
+            if (errorSpan) errorSpan.innerText = "Máximo 5 dígitos";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
+        if (id === "txtPlazo" && valorNumerico > 10) {
+            if (errorSpan) errorSpan.innerText = "Plazo máximo 10 años";
             input.classList.add("input-error");
             formularioValido = false;
         }
