@@ -15,13 +15,20 @@ function calcular(){
     camposId.forEach(id => {
         const input = document.getElementById(id);
         const errorSpan = document.getElementById("error-" + id);
+        const valor = input.value.trim();
 
         if (input.value.trim() === "") {
             if (errorSpan) errorSpan.innerText = "Este campo es obligatorio";
             input.classList.add("input-error");
             formularioValido = false;
         }
+        else if (parseFloat(valor) < 0) {
+            if (errorSpan) errorSpan.innerText = "No se permite números negativos";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
     });
+    
 
     // Si falta algún dato, detenemos la función aquí mismo
     if (!formularioValido) {
