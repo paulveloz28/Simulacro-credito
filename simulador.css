@@ -1,3 +1,13 @@
+:root {
+    --primary-blue: #0b2e59;
+    --brand-yellow: #ffcc00;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-gray: #f0f2f5;
+    --white: #ffffff;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,190 +15,210 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f6f9;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
 }
 
-/* CONTENEDOR */
+/* TOPBAR MEJORADA */
+.topbar {
+    background: var(--primary-blue);
+    padding: 20px 0;
+    border-bottom: 6px solid var(--brand-yellow);
+    box-shadow: var(--shadow);
+}
+
+.topbar-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente logo y texto */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 15px; /* Espacio entre el logo y el texto */
+}
+
+.logo-img {
+    height: 60px; /* Tamaño ajustado para cubrir las dos líneas de texto */
+    width: auto;
+    border-radius: 4px;
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo-top {
+    color: var(--brand-yellow);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.subtitulo {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 2px 0 0 0;
+    opacity: 0.9;
+}
+
+/* --- El resto del CSS de componentes se mantiene --- */
 .container {
-    width: 420px;
+    max-width: 500px;
     margin: 40px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    overflow: hidden;
+    padding: 0 20px;
 }
 
-/* HEADER CORPORATIVO */
-.header {
-    background: #003A8F; /* azul banco */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/* TARJETAS */
 .card {
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.icon-circle {
+    background: var(--bg-gray);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 15px;
-    color: #003A8F;
-    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--primary-blue);
 }
 
-/* FORMULARIO */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
 label {
     display: block;
     font-size: 13px;
-    margin-top: 10px;
-    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.prefix {
+    position: absolute;
+    left: 12px;
+    color: var(--text-light);
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    margin-top: 5px;
-    transition: all 0.3s ease;
+    padding: 12px 12px 12px 25px;
+    border: 2px solid #e1e4e8;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+#txtPlazo, #txtTasaInteres {
+    padding-left: 12px;
 }
 
 input:focus {
-    border-color: #003A8F;
-    box-shadow: 0 0 4px rgba(0,58,143,0.3);
     outline: none;
+    border-color: var(--primary-blue);
 }
 
-/* RESULTADOS */
 .result-box {
-    background: #f9fbff;
-    border-left: 4px solid #FFDD00; /* amarillo banco */
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 6px;
+    border-radius: 12px;
+    padding: 16px;
 }
 
-.result-box p {
+.result-box.summary {
+    background: #f8faff;
+}
+
+.result-box.primary {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.result-row {
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
-    margin: 5px 0;
+    margin-bottom: 8px;
 }
 
-span {
-    font-weight: bold;
-    color: #003A8F;
+.highlight {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 8px;
+    font-weight: 600;
 }
 
-/* ESTADO */
-.estado span {
-    color: #e67e22;
+.big-text {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand-yellow);
+    text-align: center;
 }
 
-/* BOTONES */
-.buttons {
+.status-bar {
+    margin-top: 15px;
+    background: rgba(0,0,0,0.2);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#spnEstadoCredito {
+    font-weight: 800;
+    color: var(--brand-yellow);
+}
+
+.actions {
     display: flex;
-    padding: 20px;
-    gap: 10px;
+    gap: 15px;
 }
 
 button {
     flex: 1;
-    padding: 12px;
-    border-radius: 6px;
+    padding: 16px;
     border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* BOTÓN PRINCIPAL (amarillo banco) */
-#btnCalcularCredito {
-    background: #FFDD00;
-    color: #003A8F;
-}
-
-#btnCalcularCredito:hover {
-    background: #f1c40f;
-}
-
-/* BOTÓN SECUNDARIO */
-#btnReiniciar {
-    background: #003A8F;
-    color: white;
-}
-
-#btnReiniciar:hover {
-    background: #002c6b;
-}
-
-/* Tipografía similar a Banco Pichincha */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
-
-/* TÍTULO */
-.titulo {
-    font-family: 'Montserrat', sans-serif;
+    border-radius: 12px;
     font-weight: 700;
-    color: #003A8F; /* azul banco */
-    text-align: center;
-    margin-bottom: 5px;
+    cursor: pointer;
 }
 
-/* SLOGAN */
-.slogan {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #FFDD00; /* amarillo banco */
-    text-align: center;
-    margin-bottom: 15px;
+.btn-main {
+    background: var(--brand-yellow);
+    color: var(--primary-blue);
 }
 
-.topbar {
-    background: #FFDD00; /* amarillo banco */
-    color: #003A8F; /* azul banco */
-    padding: 15px 20px;
-    font-weight: bold;
-}
-
-.brand {
-    font-size: 16px;
-}
-
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Barra superior */
-.topbar {
-  background: #0b2e59; /* azul bancario */
-  padding: 20px;
-  text-align: center;
-  border-bottom: 5px solid #ffd100; /* amarillo tipo Pichincha */
-}
-
-/* Título principal */
-.titulo {
-  margin: 0;
-  font-size: 34px; /* aumentado */
-  font-weight: 800;
-  color: #ffd100; /* amarillo principal */
-  letter-spacing: 1px;
-}
-
-/* Subtítulo */
-.subtitulo {
-  margin: 5px 0 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: white;
-  opacity: 0.9;
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
 }
