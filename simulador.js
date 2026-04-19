@@ -45,6 +45,16 @@ function calcular(){
             input.classList.add("input-error");
             formularioValido = false;
         }
+        if (id === "txtTasaInteres" && valorNumerico > 16) {
+            if (errorSpan) errorSpan.innerText = "Tasa máxima 16%";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
+        if (id === "txtTasaInteres" && valorNumerico < 10) {
+            if (errorSpan) errorSpan.innerText = "Tasa mínima 10%";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
     });
     
 

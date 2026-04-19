@@ -13,3 +13,5 @@ ayúdame a validar los montos máximos, enviándome un mensaje que diga máximo 
 prompt 5
 ayúdame a validar el plazo (años) enviándome un mensaje que diga plazo máximo 10 años debajo del cuadro donde se ponen los datos de plazo (años), el texto debe de ser de color rojo.
 
+prompt 6
+ayúdame a validar la tasa (%) enviándome un mensaje que diga tasa máxima 10% debajo del cuadro donde se ponen los datos de tasa (%), el texto debe de ser de color rojo.
