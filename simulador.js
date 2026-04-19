@@ -17,4 +17,9 @@ function calcular(){
     saldoDisponible=calcularDisponible(ingresosFloat,egresosFloat);
     total=document.getElementById("spnDisponible");
     total.innerText=saldoDisponible;
+
+    capacidadDePago=calcularCapacidadPago(saldoDisponible);
+    mostrarCapacidadPago=document.getElementById("spnCapacidadPago");
+    mostrarCapacidadPago.innerText=capacidadDePago;
+
 }
