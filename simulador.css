@@ -12,6 +12,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+    background-image: url("BPBackground.jpg");
 }
 
 /* Contenedor que agrupa todo */

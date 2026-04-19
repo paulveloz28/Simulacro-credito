@@ -13,3 +13,6 @@ agrégale el logotipo del banco pichincha en la parte superior izquierda a lado 
 
 Prompts 5: 
 agrega el siguiente texto BANCO PICHINCHA en la parte superior encima de simulador de texto, usando el mismo estilo de letra, colócale de color amarillo, auméntale el tamaño de la letra un poco.
+
+Prompts 6:
+ajústale la barra azul donde está el logo, los textos, BANCO PICHINCHA, simulador de crédito y somos un banco que da vida a las cajas donde se van a colocar los datos.
