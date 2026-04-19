@@ -19,3 +19,6 @@ ajústale la barra azul donde está el logo, los textos, BANCO PICHINCHA, simula
 
 Prompts 7:
 ajusta los recuadros plazo (Años) y tasa (%) al nivel del recuadro monto del préstamo ya que se están saliendo del recuadro.
+
+Prompts 8:
+ponle el estilo del botón calcular crédito igual al botón reiniciar.
