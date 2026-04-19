@@ -24,7 +24,7 @@ function calcularTotalPagar(monto,interes){
     return total;
 }
 
-function clcularCuotaMensual(total,plazoAnios){
+function calcularCuotaMensual(total,plazoAnios){
     let meses;
     let cuotas;
 

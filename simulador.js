@@ -42,4 +42,8 @@ function calcular(){
     let totalPagar=calcularTotalPagar(monto,interes);
     let cmpTotal=document.getElementById("spnTotalPrestamo");
     cmpTotal.innerText=totalPagar;
+
+    let cuotaMensual=calcularCuotaMensual(totalPagar,plazoAnios);
+    let cmpCuota=document.getElementById("spnCuotaMensual");
+    cmpCuota.innerText=cuotaMensual;
 }
