@@ -33,3 +33,11 @@ function calcularCuotaMensual(total,plazoAnios){
 
     return cuota;
 }
+
+function aprobarCredito(capacidadPago,cuaotaMensual){
+    if(capacidadPago>cuaotaMensual){
+        return true;
+    }else {
+        return false;
+    }
+}
