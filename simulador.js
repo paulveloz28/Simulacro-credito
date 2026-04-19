@@ -8,6 +8,12 @@ function calcular(){
     let saldoDisponible;
     let capacidadDePago;
     let mostrarCapacidadPago
+    let cmpMonto;
+    let cmpPlazo;
+    let cmpTasa;
+    let monto; 
+    let plazoAnios;
+    let tasa;
 
     cmpIngresosFloat=document.getElementById("txtIngresos");
     cmpEgresosFloat=document.getElementById("txtEgresos");
@@ -21,5 +27,16 @@ function calcular(){
     capacidadDePago=calcularCapacidadPago(saldoDisponible);
     mostrarCapacidadPago=document.getElementById("spnCapacidadPago");
     mostrarCapacidadPago.innerText=capacidadDePago;
+
+    cmpMonto=document.getElementById("txtMonto");
+    cmpPlazo=document.getElementById("txtPlazo");
+    cmpTasa=document.getElementById("txtTasaInteres");
+    monto=parseFloat(cmpMonto.value);
+    plazoAnios=parseInt(cmpPlazo.value);
+    tasa=parseFloat(cmpTasa.value);
+
+    let interes=calcularInteresSimple(monto,tasa,plazoAnios);
+    let cmpInteres=document.getElementById("spnInteresPagar");
+    cmpInteres.innerText=interes;
 
 }
