@@ -122,3 +122,9 @@ function calcular(){
     }
     
 }
+
+//ACTUALIZACIÓN BOTÓN REINICIO ---
+function reiniciar() {
+   
+    location.reload();
+}
