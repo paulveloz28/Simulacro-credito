@@ -224,3 +224,16 @@ input:focus {
     background: var(--primary-blue);
     color: white;
 }
+
+.error-text {
+    color: #ff4444;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+    min-height: 15px;
+}
+
+input.input-error {
+    border-color: #ff4444 !important;
+}

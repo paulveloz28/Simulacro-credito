@@ -40,6 +40,7 @@
                         <span class="prefix">$</span>
                         <input type="text" id="txtIngresos" placeholder="0.00" inputmode="decimal">
                     </div>
+                    <span id="error-txtIngresos" class="error-text"></span>
                 </div>
 
                 <div class="input-group">
@@ -48,6 +49,7 @@
                         <span class="prefix">$</span>
                         <input type="text" id="txtEgresos" placeholder="0.00" inputmode="decimal">
                     </div>
+                    <span id="error-txtEgresos" class="error-text"></span>
                 </div>
 
                 <div class="result-box summary">
@@ -75,16 +77,19 @@
                             <span class="prefix">$</span>
                             <input type="text" id="txtMonto" placeholder="0.00" inputmode="decimal">
                         </div>
+                        <span id="error-txtMonto" class="error-text"></span>
                     </div>
 
                     <div class="input-group">
                         <label for="txtPlazo">Plazo (Años)</label>
                         <input type="text" id="txtPlazo" placeholder="0" inputmode="numeric">
+                        <span id="error-txtPlazo" class="error-text"></span>
                     </div>
 
                     <div class="input-group">
                         <label for="txtTasaInteres">Tasa (%)</label>
                         <input type="text" id="txtTasaInteres" placeholder="0" inputmode="decimal">
+                        <span id="error-txtTasaInteres" class="error-text"></span>
                     </div>
                 </div>
 

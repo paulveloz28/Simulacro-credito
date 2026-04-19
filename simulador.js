@@ -1,5 +1,33 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 function calcular(){
+    const camposId = ["txtIngresos", "txtEgresos", "txtMonto", "txtPlazo", "txtTasaInteres"];
+    let formularioValido = true;
+
+    // Limpiar errores y estilos previos antes de volver a validar
+    camposId.forEach(id => {
+        const input = document.getElementById(id);
+        const errorSpan = document.getElementById("error-" + id);
+        input.classList.remove("input-error");
+        if (errorSpan) errorSpan.innerText = "";
+    });
+
+    // Revisar si hay campos vacíos
+    camposId.forEach(id => {
+        const input = document.getElementById(id);
+        const errorSpan = document.getElementById("error-" + id);
+
+        if (input.value.trim() === "") {
+            if (errorSpan) errorSpan.innerText = "Este campo es obligatorio";
+            input.classList.add("input-error");
+            formularioValido = false;
+        }
+    });
+
+    // Si falta algún dato, detenemos la función aquí mismo
+    if (!formularioValido) {
+        return;
+    }
+
     let ingresosFloat=0;
     let egresosFloat=0;
     let cmpIngresosFloat;
