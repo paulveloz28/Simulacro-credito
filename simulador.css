@@ -1,236 +1,101 @@
 :root {
     --primary-blue: #0b2e59;
     --brand-yellow: #ffcc00;
-    --text-dark: #333333;
-    --text-light: #666666;
-    --bg-gray: #f0f2f5;
     --white: #ffffff;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --bg-gray: #f0f2f5;
+    --container-width: 460px; /* Ancho unificado */
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-gray);
-    color: var(--text-dark);
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* TOPBAR MEJORADA */
+/* Contenedor que agrupa todo */
+.main-wrapper {
+    width: var(--container-width);
+    margin: 40px 0;
+}
+
+/* TOPBAR AJUSTADA AL ANCHO DE LAS CAJAS */
 .topbar {
     background: var(--primary-blue);
-    padding: 20px 0;
+    padding: 30px 25px;
     border-bottom: 6px solid var(--brand-yellow);
-    box-shadow: var(--shadow);
+    border-radius: 16px 16px 0 0; /* Redondeado superior para encajar con el estilo */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .topbar-content {
     display: flex;
-    align-items: center; /* Centra verticalmente logo y texto */
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 40px;
-    gap: 15px; /* Espacio entre el logo y el texto */
+    align-items: center;
+    gap: 15px;
 }
 
 .logo-img {
-    height: 60px; /* Tamaño ajustado para cubrir las dos líneas de texto */
+    height: 70px;
     width: auto;
-    border-radius: 4px;
 }
 
-.textos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* NUEVO ESTILO: BANCO PICHINCHA */
 .brand-name {
     color: var(--brand-yellow);
-    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
     font-weight: 800;
-    font-size: 32px; /* Tamaño aumentado */
     text-transform: uppercase;
-    line-height: 1;
     margin: 0;
-    letter-spacing: 1px;
+    line-height: 1;
 }
 
 .titulo-top {
-    color: var(--brand-yellow);
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px 0 0 0;
 }
 
 .subtitulo {
     color: var(--white);
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
     margin: 2px 0 0 0;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-/* --- El resto del CSS de componentes se mantiene --- */
+/* CONTENEDOR DE CAJAS */
 .container {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 0 20px;
+    width: 100%;
+    margin-top: 0; /* Pegado a la barra azul */
 }
 
 .card {
     background: var(--white);
-    border-radius: 16px;
     padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: var(--shadow);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    border-radius: 0 0 16px 16px; /* Solo redondeado inferior en la primera si quieres que se peguen */
     margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-.icon-circle {
-    background: var(--bg-gray);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-blue);
-    font-weight: bold;
+/* Si prefieres que las cartas estén separadas, usa este estilo: */
+.card {
+    border-radius: 16px;
+    margin-top: 20px;
 }
 
-h2 {
-    font-size: 18px;
-    color: var(--primary-blue);
-}
+/* Ajustes de inputs y botones se mantienen iguales para funcionalidad */
+.input-group { margin-bottom: 15px; }
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #666; }
+.input-wrapper { position: relative; display: flex; align-items: center; }
+.prefix { position: absolute; left: 10px; font-weight: bold; color: #999; }
+input { width: 100%; padding: 12px 12px 12px 25px; border: 2px solid #eee; border-radius: 10px; font-family: inherit; }
+#txtPlazo, #txtTasaInteres { padding-left: 12px; }
 
-.input-group {
-    margin-bottom: 18px;
-}
+.result-box { border-radius: 12px; padding: 15px; }
+.result-box.primary { background: var(--primary-blue); color: white; }
+.big-text { display: block; font-size: 32px; font-weight: 800; color: var(--brand-yellow); text-align: center; }
 
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-label {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text-light);
-}
-
-.input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.prefix {
-    position: absolute;
-    left: 12px;
-    color: var(--text-light);
-}
-
-input {
-    width: 100%;
-    padding: 12px 12px 12px 25px;
-    border: 2px solid #e1e4e8;
-    border-radius: 10px;
-    font-family: inherit;
-}
-
-#txtPlazo, #txtTasaInteres {
-    padding-left: 12px;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-}
-
-.result-box {
-    border-radius: 12px;
-    padding: 16px;
-}
-
-.result-box.summary {
-    background: #f8faff;
-}
-
-.result-box.primary {
-    background: var(--primary-blue);
-    color: var(--white);
-}
-
-.result-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
-.highlight {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 8px;
-    font-weight: 600;
-}
-
-.big-text {
-    display: block;
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--brand-yellow);
-    text-align: center;
-}
-
-.status-bar {
-    margin-top: 15px;
-    background: rgba(0,0,0,0.2);
-    padding: 8px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-#spnEstadoCredito {
-    font-weight: 800;
-    color: var(--brand-yellow);
-}
-
-.actions {
-    display: flex;
-    gap: 15px;
-}
-
-button {
-    flex: 1;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.btn-main {
-    background: var(--brand-yellow);
-    color: var(--primary-blue);
-}
-
-.btn-secondary {
-    background: var(--white);
-    color: var(--primary-blue);
-    border: 2px solid var(--primary-blue);
-}
+.actions { display: flex; gap: 10px; }
+button { flex: 1; padding: 15px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; }
+.btn-main { background: var(--brand-yellow); color: var(--primary-blue); }
+.btn-secondary { background: white; border: 2px solid var(--primary-blue); color: var(--primary-blue); }

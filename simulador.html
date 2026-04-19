@@ -13,102 +13,104 @@
 </head>
 <body>
 
-    <header class="topbar">
-        <div class="topbar-content">
-            <img src="isoBancoP.jpg" alt="Banco Pichincha" class="logo-img">
-            
-            <div class="textos">
-                <h2 class="brand-name">BANCO PICHINCHA</h2>
-                <h1 class="titulo-top">Simulador de Crédito</h1>
-                <p class="subtitulo">Somos un banco que da vida</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="card">
-            <div class="card-header">
-                <div class="icon-circle"><span>$</span></div>
-                <h2>Datos financieros</h2>
-            </div>
-
-            <div class="input-group">
-                <label for="txtIngresos">Ingresos Mensuales</label>
-                <div class="input-wrapper">
-                    <span class="prefix">$</span>
-                    <input type="text" id="txtIngresos" placeholder="0.00">
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="topbar-content">
+                <img src="isoBancoP.jpg" alt="Banco Pichincha" class="logo-img">
+                
+                <div class="textos">
+                    <h2 class="brand-name">BANCO PICHINCHA</h2>
+                    <h1 class="titulo-top">Simulador de Crédito</h1>
+                    <p class="subtitulo">Somos un banco que da vida</p>
                 </div>
             </div>
+        </header>
 
-            <div class="input-group">
-                <label for="txtEgresos">Egresos Mensuales</label>
-                <div class="input-wrapper">
-                    <span class="prefix">$</span>
-                    <input type="text" id="txtEgresos" placeholder="0.00">
+        <main class="container">
+            <section class="card">
+                <div class="card-header">
+                    <div class="icon-circle"><span>$</span></div>
+                    <h2>Datos financieros</h2>
                 </div>
-            </div>
 
-            <div class="result-box summary">
-                <div class="result-row">
-                    <span>Disponible:</span>
-                    <span id="spnDisponible" class="val">$0.00</span>
-                </div>
-                <div class="result-row">
-                    <span>Capacidad de pago:</span>
-                    <span id="spnCapacidadPago" class="val">$0.00</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="card-header">
-                <div class="icon-circle"><span>%</span></div>
-                <h2>Detalles del Crédito</h2>
-            </div>
-
-            <div class="input-group">
-                <label for="txtMonto">Monto del Préstamo</label>
-                <div class="input-wrapper">
-                    <span class="prefix">$</span>
-                    <input type="text" id="txtMonto" placeholder="0.00">
-                </div>
-            </div>
-
-            <div class="row">
                 <div class="input-group">
-                    <label for="txtPlazo">Plazo (Años)</label>
-                    <input type="text" id="txtPlazo" placeholder="Ej: 5">
+                    <label for="txtIngresos">Ingresos Mensuales</label>
+                    <div class="input-wrapper">
+                        <span class="prefix">$</span>
+                        <input type="text" id="txtIngresos" placeholder="0.00">
+                    </div>
                 </div>
+
                 <div class="input-group">
-                    <label for="txtTasaInteres">Tasa (%)</label>
-                    <input type="text" id="txtTasaInteres" placeholder="12">
+                    <label for="txtEgresos">Egresos Mensuales</label>
+                    <div class="input-wrapper">
+                        <span class="prefix">$</span>
+                        <input type="text" id="txtEgresos" placeholder="0.00">
+                    </div>
                 </div>
-            </div>
 
-            <div class="result-box primary">
-                <div class="result-row">
-                    <span>Interés a pagar:</span>
-                    <span id="spnInteresPagar">$0.00</span>
+                <div class="result-box summary">
+                    <div class="result-row">
+                        <span>Disponible:</span>
+                        <span id="spnDisponible" class="val">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span>Capacidad de pago:</span>
+                        <span id="spnCapacidadPago" class="val">$0.00</span>
+                    </div>
                 </div>
-                <div class="result-row highlight">
-                    <span>Total Préstamo:</span>
-                    <span id="spnTotalPrestamo">$0.00</span>
-                </div>
-                <div class="result-row main-result">
-                    <span>Cuota Mensual:</span>
-                    <span id="spnCuotaMensual" class="big-text">$0.00</span>
-                </div>
-                <div class="status-bar">
-                    <p class="estado">Estado: <span id="spnEstadoCredito">ESPERANDO DATOS</span></p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="actions">
-            <button onclick="calcular()" id="btnCalcularCredito" class="btn-main">Calcular Crédito</button>
-            <button id="btnReiniciar" class="btn-secondary">Reiniciar</button>
-        </div>
-    </main>
+            <section class="card">
+                <div class="card-header">
+                    <div class="icon-circle"><span>%</span></div>
+                    <h2>Detalles del Crédito</h2>
+                </div>
+
+                <div class="input-group">
+                    <label for="txtMonto">Monto del Préstamo</label>
+                    <div class="input-wrapper">
+                        <span class="prefix">$</span>
+                        <input type="text" id="txtMonto" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="txtPlazo">Plazo (Años)</label>
+                        <input type="text" id="txtPlazo" placeholder="Ej: 5">
+                    </div>
+                    <div class="input-group">
+                        <label for="txtTasaInteres">Tasa (%)</label>
+                        <input type="text" id="txtTasaInteres" placeholder="12">
+                    </div>
+                </div>
+
+                <div class="result-box primary">
+                    <div class="result-row">
+                        <span>Interés a pagar:</span>
+                        <span id="spnInteresPagar">$0.00</span>
+                    </div>
+                    <div class="result-row highlight">
+                        <span>Total Préstamo:</span>
+                        <span id="spnTotalPrestamo">$0.00</span>
+                    </div>
+                    <div class="result-row main-result">
+                        <span>Cuota Mensual:</span>
+                        <span id="spnCuotaMensual" class="big-text">$0.00</span>
+                    </div>
+                    <div class="status-bar">
+                        <p class="estado">Estado: <span id="spnEstadoCredito">ESPERANDO DATOS</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button onclick="calcular()" id="btnCalcularCredito" class="btn-main">Calcular Crédito</button>
+                <button id="btnReiniciar" class="btn-secondary">Reiniciar</button>
+            </div>
+        </main>
+    </div>
 
 </body>
 </html>
