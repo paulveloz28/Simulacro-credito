@@ -23,3 +23,13 @@ function calcularTotalPagar(monto,interes){
     total=monto+interes+100;
     return total;
 }
+
+function clcularCuotaMensual(total,plazoAnios){
+    let meses;
+    let cuotas;
+
+    meses=plazoAnios*12;
+    cuota=total/meses;
+
+    return cuota;
+}
