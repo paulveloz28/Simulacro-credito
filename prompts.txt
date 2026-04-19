@@ -4,3 +4,9 @@ actúa como diseñador gráfico, mejora la parte visual de este ejercicio, modif
 
 Prompts 2:
 mejora el estilo, darle un aspecto empresarial, como el del banco pichincha, coloca los colores característicos del banco.
+
+Prompts 3:
+coloca el estilo de letra del banco pichincha en el texto simulador de crédito, coloca los colores característicos del banco pichincha. además, agrega la siguiente frase "¡Somos un Banco que da vida!" debajo del texto simulador de crédito colocando los colores característicos del banco y estilo de letra del banco. no cambies el estilo de lo demás solo lo solicitado.
+
+Prompts 4: 
+agrégale el logotipo del banco pichincha en la parte superior izquierda a lado del texto simulador de crédito, dale un tamaño que abarque los dos textos simulador de crédito y somos un banco que da vida.
