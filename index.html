@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Simulador de Crédito | Banco Pichincha</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
                     <label for="txtIngresos">Ingresos Mensuales</label>
                     <div class="input-wrapper">
                         <span class="prefix">$</span>
-                        <input type="text" id="txtIngresos" placeholder="0.00">
+                        <input type="text" id="txtIngresos" placeholder="0.00" inputmode="decimal">
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                     <label for="txtEgresos">Egresos Mensuales</label>
                     <div class="input-wrapper">
                         <span class="prefix">$</span>
-                        <input type="text" id="txtEgresos" placeholder="0.00">
+                        <input type="text" id="txtEgresos" placeholder="0.00" inputmode="decimal">
                     </div>
                 </div>
 
@@ -73,18 +73,18 @@
                         <label for="txtMonto">Monto</label>
                         <div class="input-wrapper">
                             <span class="prefix">$</span>
-                            <input type="text" id="txtMonto" placeholder="0.00">
+                            <input type="text" id="txtMonto" placeholder="0.00" inputmode="decimal">
                         </div>
                     </div>
 
                     <div class="input-group">
                         <label for="txtPlazo">Plazo (Años)</label>
-                        <input type="text" id="txtPlazo" placeholder="0">
+                        <input type="text" id="txtPlazo" placeholder="0" inputmode="numeric">
                     </div>
 
                     <div class="input-group">
                         <label for="txtTasaInteres">Tasa (%)</label>
-                        <input type="text" id="txtTasaInteres" placeholder="0">
+                        <input type="text" id="txtTasaInteres" placeholder="0" inputmode="decimal">
                     </div>
                 </div>
 

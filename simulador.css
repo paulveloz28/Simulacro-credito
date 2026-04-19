@@ -4,32 +4,34 @@
     --white: #ffffff;
     --bg-gray: #f0f2f5;
     --text-light: #666666;
-    /* CAMBIO: Ancho máximo definido para alineación global */
     --container-width: 460px;
 }
 
-* {
+/* CAMBIO: Reset para evitar desbordamientos laterales en móviles */
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg-gray);
+    -webkit-text-size-adjust: 100%; /* Evita que el navegador cambie el tamaño del texto */
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
     background-image: url(BPBackground.jpg);
 }
 
-/* CAMBIO: Wrapper centrado con ancho controlado para alinearse con la barra azul */
+/* CAMBIO: Ancho máximo responsivo. 95% para móviles, 460px para escritorio */
 .main-wrapper {
-    width: 100%;
+    width: 95%;
     max-width: var(--container-width);
-    margin: 40px 20px;
+    margin: 20px auto;
 }
 
-/* CABECERA AJUSTADA */
+/* CABECERA */
 .topbar {
     background: var(--primary-blue);
     padding: 25px;
@@ -41,18 +43,17 @@ body {
 .topbar-content {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .logo-img {
-    height: 75px;
+    height: 65px;
     width: auto;
 }
 
-/* CAMBIO: Estilos para el texto de Marca BANCO PICHINCHA */
 .brand-name {
     color: var(--brand-yellow);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1;
@@ -60,37 +61,37 @@ body {
 
 .titulo-top {
     color: var(--white);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     margin: 4px 0;
 }
 
 .subtitulo {
     color: var(--white);
-    font-size: 12px;
+    font-size: 11px;
     opacity: 0.8;
 }
 
 /* TARJETAS */
 .card {
     background: var(--white);
-    padding: 24px;
+    padding: 22px;
     border-radius: 16px;
-    margin-top: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .icon-circle {
     background: var(--bg-gray);
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -99,22 +100,25 @@ body {
     color: var(--primary-blue);
 }
 
-/* CAMBIO: Fila triple con proporciones para evitar desbordamiento */
+h2 {
+    font-size: 15px;
+    color: var(--primary-blue);
+}
+
+/* CAMBIO: Ajuste de la fila de 3 columnas para que no se salga del recuadro */
 .row-triple {
     display: grid;
-    grid-template-columns: 1.4fr 0.8fr 0.8fr; 
-    gap: 10px;
+    grid-template-columns: 1.3fr 0.85fr 0.85fr;
+    gap: 8px;
     margin-bottom: 20px;
-    align-items: flex-end;
 }
 
-/* CAMBIO: min-width: 0 evita que los inputs se salgan del contenedor en móviles */
 .row-triple .input-group {
     margin-bottom: 0;
-    min-width: 0; 
+    min-width: 0;
 }
 
-/* FORMULARIOS */
+/* INPUTS (AQUÍ ESTÁ LA SOLUCIÓN AL AGRANDAMIENTO) */
 .input-group {
     margin-bottom: 15px;
 }
@@ -143,13 +147,15 @@ label {
 
 input {
     width: 100%;
-    padding: 12px;
+    height: 45px;
+    padding: 10px;
     border: 2px solid #eee;
     border-radius: 10px;
     font-family: inherit;
-    /* CAMBIO: font-size 16px evita el zoom automático en celulares */
-    font-size: 16px; 
-    transition: border-color 0.3s;
+    /* CAMBIO CLAVE: font-size de 16px es lo que evita que el móvil se agrande (zoom automático) */
+    font-size: 16px !important; 
+    box-sizing: border-box;
+    -webkit-appearance: none; /* Elimina sombras internas en iPhone */
 }
 
 .input-wrapper input {
@@ -161,7 +167,7 @@ input:focus {
     border-color: var(--primary-blue);
 }
 
-/* CUADROS DE RESULTADOS */
+/* RESULTADOS */
 .result-box {
     border-radius: 12px;
     padding: 15px;
@@ -185,32 +191,36 @@ input:focus {
 
 .big-text {
     display: block;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 800;
     color: var(--brand-yellow);
     text-align: center;
 }
 
-/* CAMBIO: Estilo unificado para los botones (Borde azul, fondo blanco) */
+/* BOTONES UNIFICADOS */
 .actions {
     display: flex;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .btn-outline {
     flex: 1;
-    padding: 15px;
+    height: 50px;
     background: white;
     border: 2px solid var(--primary-blue);
     color: var(--primary-blue);
     border-radius: 12px;
     font-weight: 700;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.2s;
+    /* CAMBIO: Quita el color azulado que sale al tocar el botón en Android */
+    -webkit-tap-highlight-color: transparent;
 }
 
-.btn-outline:hover {
+.btn-outline:active {
     background: var(--primary-blue);
     color: white;
 }
