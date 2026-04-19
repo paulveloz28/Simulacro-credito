@@ -47,6 +47,8 @@ function calcular(){
     let cmpCuota=document.getElementById("spnCuotaMensual");
     cmpCuota.innerText=cuotaMensual;
 
+    cmpCuota.innerText = "$" + cuotaMensual.toFixed(2).replace(".", ",");
+
     let estado=aprobarCredito(capacidadDePago,cuotaMensual);
     let cmpEstado=document.getElementById("spnEstadoCredito");
 
