@@ -129,3 +129,24 @@ button {
 #btnReiniciar:hover {
     background: #002c6b;
 }
+
+/* Tipografía similar a Banco Pichincha */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+/* TÍTULO */
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #003A8F; /* azul banco */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* SLOGAN */
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #FFDD00; /* amarillo banco */
+    text-align: center;
+    margin-bottom: 15px;
+}
