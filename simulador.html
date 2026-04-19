@@ -11,20 +11,18 @@
 <body>
 
     <div class="container">
-        <h1>💰 Simulador de Crédito</h1>
+        <div class="header">
+            <h1>Simulador de Crédito</h1>
+        </div>
 
         <div class="card">
             <h2>Datos financieros</h2>
 
-            <div class="form-group">
-                <label for="txtIngresos">Ingresos</label>
-                <input type="text" id="txtIngresos" placeholder="Ej: 1200">
-            </div>
+            <label for="txtIngresos">Ingresos</label>
+            <input type="text" id="txtIngresos">
 
-            <div class="form-group">
-                <label for="txtEgresos">Egresos</label>
-                <input type="text" id="txtEgresos" placeholder="Ej: 500">
-            </div>
+            <label for="txtEgresos">Egresos</label>
+            <input type="text" id="txtEgresos">
 
             <div class="result-box">
                 <p>Disponible <span id="spnDisponible"></span></p>
@@ -35,20 +33,14 @@
         <div class="card">
             <h2>Solicitud de crédito</h2>
 
-            <div class="form-group">
-                <label for="txtMonto">Monto</label>
-                <input type="text" id="txtMonto" placeholder="Ej: 5000">
-            </div>
+            <label for="txtMonto">Monto</label>
+            <input type="text" id="txtMonto">
 
-            <div class="form-group">
-                <label for="txtPlazo">Plazo (años)</label>
-                <input type="text" id="txtPlazo" placeholder="Ej: 3">
-            </div>
+            <label for="txtPlazo">Plazo en años</label>
+            <input type="text" id="txtPlazo">
 
-            <div class="form-group">
-                <label for="txtTasaInteres">Tasa de interés (%)</label>
-                <input type="text" id="txtTasaInteres" placeholder="Ej: 12">
-            </div>
+            <label for="txtTasaInteres">Tasa de interés</label>
+            <input type="text" id="txtTasaInteres">
 
             <div class="result-box">
                 <p>Interés <span id="spnInteresPagar"></span></p>
@@ -60,7 +52,7 @@
 
         <div class="buttons">
             <button onclick="calcular()" id="btnCalcularCredito">Calcular</button>
-            <button id="btnReiniciar" class="btn-secondary">Reiniciar</button>
+            <button id="btnReiniciar">Reiniciar</button>
         </div>
     </div>
 
